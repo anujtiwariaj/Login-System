@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register Page</title>
+  <style>
+    /* Use the same CSS as the login page for consistent styling */
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+      background: url('bg.jpg') no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .login-box {
+      position: relative;
+      width: 400px;
+      height: 550px;
+      background: rgba(0, 0, 255, 0.5);
+      backdrop-filter: blur(20px);
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    h2 {
+      font-size: 2em;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .input-box {
+      position: relative;
+      margin: 20px 0;
+      width: 310px;
+      border-bottom: 2px solid #fff;
+    }
+
+    .input-box label {
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      transform: translateY(-50%);
+      font-size: 1em;
+      color: #fff;
+      transition: 0.5s;
+      pointer-events: none;
+    }
+
+    .input-box input {
+      width: 100%;
+      height: 50px;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-size: 1em;
+      color: #fff;
+      padding: 0 35px 0 5px;
+    }
+
+    .input-box input:focus~label,
+    .input-box input:valid~label {
+      top: -20px;
+      font-size: 0.8em;
+      color: #ffeb3b;
+    }
+
+    button {
+      width: 100%;
+      height: 40px;
+      border-radius: 40px;
+      background: #fff;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      color: #000;
+      font-size: 1em;
+      font-weight: 500;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #f1f1f1;
+    }
+
+    .login-link {
+      font-size: 0.9em;
+      color: #fff;
+      text-align: center;
+      margin: 25px 0 10px;
+    }
+
+    .login-link p a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .login-link p a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 360px) {
+      .login-box {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="login-section">
+    <div class="login-box">
+      <h2>Register</h2>
+      <form action="/register" method="POST">
+        <div class="input-box">
+          <input type="text" name="username" required>
+          <label>Username</label>
+        </div>
+        <div class="input-box">
+          <input type="email" name="email" required>
+          <label>Email</label>
+        </div>
+        <div class="input-box">
+          <input type="password" name="password" required>
+          <label>Password</label>
+        </div>
+        <button type="submit" class="login-button">Register</button>
+        <div class="login-link">
+          <p>Already have an account? <a href="index.html">Login</a></p>
+        </div>
+      </form>
+    </div>
+  </section>
+</body>
+
+</html>
